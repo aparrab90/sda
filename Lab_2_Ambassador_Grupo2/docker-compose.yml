@@ -1,0 +1,25 @@
+version: '3'
+services:
+  shard1:
+    build: ./shard1
+    ports:
+      - "5001:5000"
+  
+  shard2:
+    build: ./shard2
+    ports:
+      - "5002:5000"
+  
+  shard3:
+    build: ./shard3
+    ports:
+      - "5003:5000"
+  
+  embassador:
+    build: ./embassador
+    ports:
+      - "8080:5000"
+    depends_on:
+      - shard1
+      - shard2
+      - shard3
