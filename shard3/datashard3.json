@@ -1,0 +1,23 @@
+{
+    "shard3": {
+      "1": {
+        "name": "User 7",
+        "email": "user7@example.com"
+      },"2": {
+        "name": "User 8",
+        "email": "user8@example.com"
+      },"3": {
+        "name": "User 9",
+        "email": "user9@example.com"
+      },"4": {
+        "name": "User 10",
+        "email": "user10@example.com"
+      },"5": {
+        "name": "User 11",
+        "email": "user11@example.com"
+      },"6": {
+        "name": "User 12",
+        "email": "user12@example.com"
+      }
+    }
+  }  
