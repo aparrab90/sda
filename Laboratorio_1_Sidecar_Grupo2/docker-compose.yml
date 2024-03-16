@@ -1,0 +1,15 @@
+version: '3'
+services:
+  main:
+    build:
+      context: ./app
+    ports:
+      - "5000:5000"
+    depends_on:
+      - logger
+
+  logger:
+    build:
+      context: ./logger
+    ports:
+      - "5001:5001"

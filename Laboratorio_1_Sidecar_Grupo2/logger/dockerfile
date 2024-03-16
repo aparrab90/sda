@@ -1,0 +1,11 @@
+# Usamos la imagen oficial de Python 3.9
+FROM python:3.9
+# Establecemos el directorio de trabajo
+WORKDIR /logger
+# Copiamos los archivos necesarios al contenedor
+COPY logger.py .
+COPY requirements.txt .
+# Instalamos las dependencias de Python
+RUN pip install -r requirements.txt
+# El contenedor ejecutará logger.py al iniciarse
+CMD ["python", "logger.py"]

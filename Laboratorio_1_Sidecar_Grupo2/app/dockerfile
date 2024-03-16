@@ -1,0 +1,13 @@
+# Usamos la imagen oficial de Python 3.9
+FROM python:3.9
+# Establecemos el directorio de trabajo
+WORKDIR /app
+
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copiamos el script de la aplicación principal al contenedor
+COPY main.py .
+# El contenedor ejecutará main.py al iniciarse
+CMD ["python", "main.py"]
